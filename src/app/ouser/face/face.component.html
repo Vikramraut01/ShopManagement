@@ -1,0 +1,35 @@
+<div class="fst">
+  Welcome {{ service.getuser().firstName }}
+  <br />
+  <button (click)="getAllProduct(1)">showDetails</button>
+
+  <div *ngIf="isShow == 1">
+    <table border="1">
+      <tr>
+        <th>SN</th>
+        <th>productName</th>
+        <th>ExpDate</th>
+        <th>Quantity</th>
+        <th>price/per</th>
+        <th>Action</th>
+      </tr>
+      <tr *ngFor="let product of avProduct; let i = index">
+        <td>{{ i + 1 }}</td>
+        <td>{{ product.productName }}</td>
+        <td>{{ product.expDate | date }}</td>
+        <td>{{ product.productQuantity }}</td>
+        <td>{{ product.productPrice }}</td>
+        <td>
+          <input type="text" #userQuantity />
+          <button
+            (click)="
+              buy(userQuantity.value, product.productQuantity, product.id)
+            "
+          >
+            buy
+          </button>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>

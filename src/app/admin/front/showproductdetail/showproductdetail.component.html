@@ -1,0 +1,20 @@
+<button (click)="getalldetails(1)">showPdetail</button>
+
+<div *ngIf="isShow == 1">
+  <table border="1">
+    <tr>
+      <th>Srno.</th>
+      <th>ProName</th>
+      <th>ProPrice/per</th>
+      <th>expDate</th>
+      <th>proQuantity</th>
+    </tr>
+    <tr *ngFor="let product of allproduct; let i = index">
+      <td>{{ i + 1 }}</td>
+      <td>{{ product.productName }}</td>
+      <td>{{ product.productPrice }}</td>
+      <td>{{ product.expDate | date }}</td>
+      <td>{{ product.productQuantity }}</td>
+    </tr>
+  </table>
+</div>

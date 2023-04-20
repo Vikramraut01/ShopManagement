@@ -1,0 +1,10 @@
+#fst {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+#fst input {
+  border-radius: 10px;
+  box-shadow: rgba(2, 2, 2, 0.5);
+}

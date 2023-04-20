@@ -1,0 +1,33 @@
+welcome for ragistration
+<br />
+<fieldset>
+  firstName : <input type="text" [(ngModel)]="user.firstName" />
+  <br />
+  <br />
+  lastName : <input type="text" [(ngModel)]="user.lastName" />
+  <br />
+  <br />
+  Email adress : <input type="email" [(ngModel)]="user.emailAdress" />
+  <br />
+  <br />
+  DateOfBirth : <input type="date" [(ngModel)]="user.dateOfBirth" />
+  <br />
+  <br />
+  Contact no : <input type="text" [(ngModel)]="user.contactNo" />
+  <br />
+  <br />
+  Username : <input type="text" #username />
+  <br />
+  <br />
+  Password : <input type="password" #passward />
+  <br />
+  <br />
+  <br />
+  <button
+    type="button"
+    class="btn btn-primary"
+    (click)="ragister(username.value, passward.value)"
+  >
+    Register
+  </button>
+</fieldset>

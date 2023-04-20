@@ -1,0 +1,20 @@
+<div id="fst">
+  <h1>Welcome</h1>
+  <br />
+  <button type="button" class="btn btn-primary" (click)="whatToShow(1)">
+    login
+  </button>
+  <button type="button" class="btn btn-primary" (click)="whatToShow(2)">
+    Ragister
+  </button>
+
+  <br />
+
+  <div *ngIf="isShow == 1">
+    <app-userlogin></app-userlogin>
+  </div>
+
+  <div *ngIf="isShow == 2">
+    <app-ragister></app-ragister>
+  </div>
+</div>

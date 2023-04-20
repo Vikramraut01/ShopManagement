@@ -1,0 +1,16 @@
+welcome {{this.service.getuser().firstName+" "+this.service.getuser().lastName}}
+<br>
+<button (click)="whatToShow(1)">AddProduct</button>
+<button (click)="whatToShow(2)">ShowProduct</button>
+<button (click)="whatToShow(3)">BuyProduct</button>
+
+<div *ngIf="isshow==1">
+<app-productadd></app-productadd>
+</div>
+<div *ngIf="isshow==2">
+<app-showproductdetail></app-showproductdetail>
+</div>
+<div *ngIf="isshow==3">
+    
+<app-buyproduct></app-buyproduct>
+</div>

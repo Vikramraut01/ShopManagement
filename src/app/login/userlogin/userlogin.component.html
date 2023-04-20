@@ -1,0 +1,12 @@
+<div id="fst">
+  <div>Username : <input type="text" #username /></div>
+
+  <div>Passward : <input type="password" #password /></div>
+  <button
+    type="button"
+    class="btn btn-primary"
+    (click)="userlogin(username.value, password.value)"
+  >
+    login
+  </button>
+</div>

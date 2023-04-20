@@ -1,0 +1,24 @@
+welcome {{ this.service.getuser().firstName }}
+<br />
+<button (click)="getAllBuyPro(1)">ShowBuyDetail</button>
+
+<div *ngIf="show == 1">
+  <table border="1">
+    <tr>
+      <th>SN</th>
+      <th>UserName</th>
+      <th>ProductName</th>
+      <th>Price/per</th>
+      <th>Quantity</th>
+      <th>contactNumber</th>
+    </tr>
+    <tr *ngFor="let product of buypro; let i = index">
+      <td>{{ i + 1 }}</td>
+      <td>{{ product.firstName }}</td>
+      <td>{{ product.productName }}</td>
+      <td>{{ product.productPrice }}</td>
+      <td>{{ product.productQuantity }}</td>
+      <td>{{ product.contactNo }}</td>
+    </tr>
+  </table>
+</div>

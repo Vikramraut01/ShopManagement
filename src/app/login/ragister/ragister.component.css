@@ -1,0 +1,6 @@
+fieldset input {
+  border-radius: 10px;
+
+  box-shadow: rgba(2, 2, 2, 0.5);
+  background-color: rgba(220, 220, 220, 0.5);
+}
